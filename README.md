@@ -1,4 +1,4 @@
-INGO-CD-Contacts
+Steering Committee Constituents
 ================
 
-INGO Country Directors Contact List
+Steering Committee Constituents and primary contacts
