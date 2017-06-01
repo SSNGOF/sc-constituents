@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Steering Committee Constituents</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='assets/style.css'>
+</head>
+<body class="content">
+<header>
+    <div class="container">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="http://southsudanngoforum.org/sc-constituents">SC Constituents</a></li>
+                <li><a href="http://southsudanngoforum.org/contacts">INGO CD Contacts</a></li>
+                <li><a href="http://southsudanngoforum.org/contacts-nngo">NNGO CD Contacts</a></li>
+            </ul>
+        </nav>
+        <a href="/"><img class="img-responsive" src="img/ss-ngo-forum-logo.png" alt="South Sudan NGO FORUM"></a>
+    </div>
+</header>
+
+<div id="main-body" class="container s-results">
+    <div class="content-main-content" id="dashboard">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="title-divider">Steering Committee Constituents<span></span></h3>
+                <div class="notes blue-notes">
+                    <ul>
+                        <li>This list contains SC constituents and primary contact details of organisations who are members of the NGO Forum.</li>
+                        <li>If there are missing or errors, please contact Ngo Forum Information Manager on <a>infomgr@southsudanngoforum.org</a></li>
+                    </ul>
+                </div>                    
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <input class="form-control" id="fullTableFilter" type="text" placeholder="Search ..."></input>
+                </p>
+                <div id="fullTable" class="table-responsive"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="text-center">
+            &copy; South Sudan NGO Forum | southsudanngoforum.org | All rights reserved 
+        </p>
+    </footer>
+</div>
+<script type='text/javascript' src='js/jquery.min.js'></script>
+<script src="js/bootstrap.min.js"></script>
+<script type='text/javascript' src='js/tabletop1.3.4.js'></script>
+<script type='text/javascript' src='js/sheetsee.js'></script>
+<!-- start scripts -->
+<script id="fullTable_template" type="text/html">
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <th class="tHeader">Acted</th>
+            <th class="tHeader">Concern</th>
+            <th class="tHeader">CRS</th>
+            <th class="tHeader">Finn Church Aid</th>
+            <th class="tHeader">IMC</th>
+            <th class="tHeader">Medair</th>
+            <th class="tHeader">Mercy Corps</th>
+            <th class="tHeader">Save the Children</th>
+            <th class="tHeader">World Relief</th>
+            <th class="tHeader">World Vision</th>
+        </tr>
+        {{#rows}}
+        <tr>
+            <td>{{ acted }}</td>
+            <td>{{ concern }}</td>
+            <td>{{ crs }}</td>
+            <td>{{ finn-church-aid }}</td>
+            <td>{{ imc }}</td>
+            <td>{{ medair }}</td>
+            <td>{{ mercy-corps }}</td>
+            <td>{{ sci }}</td>
+            <td>{{ world-relief }}</td>
+            <td>{{ world-vision }}</td>
+        </tr>
+        {{/rows}}
+    </table>
+</script>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() 
+    {
+        Tabletop.init({
+            key: '1KSRp_DwoWwZwYrAC7QHB44c4XbZRP-5M3UhmfPIBvDM',
+            simpleSheet: true,
+            callback: function(data) {
+                _tableOptions = {
+                    "data": data,
+                    "pagination": 50,
+                    "tableDiv": "#fullTable",
+                    "filterDiv": "#fullTableFilter"
+                }
+                Sheetsee.makeTable(_tableOptions)
+                Sheetsee.initiateTableFilter(_tableOptions)
+            },
+        })
+    })
+
+    // google analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+    {
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-71221812-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
