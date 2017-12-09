@@ -50,7 +50,8 @@
     </div>
     <footer>
         <p class="text-center">
-            &copy; South Sudan NGO Forum | southsudanngoforum.org | All rights reserved 
+            &copy; South Sudan NGO Forum | southsudanngoforum.org | All rights reserved <br/>
+            <img style="height:50px" src="img/ngo-forum-donor-logos.png" alt="Donors"/>
         </p>
     </footer>
 </div>
@@ -97,6 +98,9 @@
             key: '1KSRp_DwoWwZwYrAC7QHB44c4XbZRP-5M3UhmfPIBvDM',
             simpleSheet: true,
             callback: function(data) {
+
+                console.log(data);
+                
                 _tableOptions = {
                     "data": data,
                     "pagination": 200,
