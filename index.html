@@ -65,27 +65,27 @@
         <tr>
             <th class="tHeader">Acted</th>
             <th class="tHeader">Care</th>
-            <th class="tHeader">Concern-Worldwide</th>
+            <th class="tHeader">Concern Worldwide</th>
             <th class="tHeader">DRC/DDG</th>
             <th class="tHeader">FCA</th>
             <th class="tHeader">Intersos</th>
             <th class="tHeader">Mediar</th>
-            <th class="tHeader">Nonviolent-Peaceforce</th>
-            <th class="tHeader">World-Relief</th>
-            <th class="tHeader">World-Vision</th>
+            <th class="tHeader">Nonviolent Peace Force</th>
+            <th class="tHeader">World Relief</th>
+            <th class="tHeader">World Vision</th>
         </tr>
         {{#rows}}
         <tr>
             <td>{{ acted }}</td>
             <td>{{ care }}</td>
             <td>{{ concern-worldwide }}</td>
-            <td>{{ drc-ddg }}</td>
+            <td>{{ drcddg }}</td>
             <td>{{ fca }}</td>
             <td>{{ intersos }}</td>
             <td>{{ medair }}</td>
-            <td>{{ noviolent-peaceforce }}</td>
-            <td>{{ world-relief }}</td>
-            <td>{{ world-vision }}</td>
+            <td>{{ nonviolentpeaceforce }}</td>
+            <td>{{ worldrelief }}</td>
+            <td>{{ worldvision }}</td>
         </tr>
         {{/rows}}
     </table>
@@ -98,6 +98,9 @@
             key: '1KSRp_DwoWwZwYrAC7QHB44c4XbZRP-5M3UhmfPIBvDM',
             simpleSheet: true,
             callback: function(data) {
+
+                // console.log(data);
+                
                 _tableOptions = {
                     "data": data,
                     "pagination": 200,
